@@ -5,8 +5,11 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$var['nim'] = '123110016';
-		$var['nama'] = 'Galih Bayu';
+		$variabel['nim'] = '123110016';
+		$variabel['nama'] = 'Galih Bayu';
+
+		$var['prodi'] = $variabel;
+
 		$this->load->view('welcome_message', $var);
 	}
 	public function kampus()

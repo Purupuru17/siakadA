@@ -1,3 +1,7 @@
 <h1>SELAMAT DATANG, di UNIMUDA SORONG (versi view)</h1>
+<hr>
+
+
+NIM : <?= $prodi['nim'] ?>
 <br>
-<h1><?php echo $nim; ?></h1> <?= $nama ?>
+NAMA : <?= $prodi['nama'] ?>

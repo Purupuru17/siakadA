@@ -5,7 +5,11 @@ class Mahasiswa extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('mahasiswa/v_index');
+		$this->load->model('model_mhs');	
+
+		$var['mhs'] = $this->model_mhs->getAll();
+		 
+		$this->load->view('mahasiswa/v_index', $var);
 	}
 	public function tambah()
 	{

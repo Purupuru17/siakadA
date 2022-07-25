@@ -9,11 +9,19 @@ class Mahasiswa extends CI_Controller {
 	}
 	public function tambah()
 	{
-		$this->load->view('mahasiswa/v_tambah');
+		$var['title'] = 'TAMBAH MAHASISWA';
+		$this->load->view('mahasiswa/v_tambah', $var);
+	}
+	public function tambah_aksi()
+	{
+		$input = $this->input->post();
+		print_r($input);
+		exit();
 	}
 	public function ubah()
 	{
-		$this->load->view('mahasiswa/v_ubah');
+		$var['title'] = 'UBAH MAHASISWA';
+		$this->load->view('mahasiswa/v_tambah', $var);
 	}
 	public function hapus()
 	{

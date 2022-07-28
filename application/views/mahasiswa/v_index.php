@@ -1,12 +1,16 @@
 <!-- BARU -->
 <link rel="stylesheet" href="<?= base_url('import/template.css') ?>">
-
+<style>
+	th, td{
+		text-align: center;
+	}
+</style>
 <h1>DATA MAHASISWA</h1>
 <hr>
 <a class="btn btn-success" href="<?= site_url('mahasiswa/tambah') ?>">TAMBAH</a>
 <hr>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
 	<tr>
 		<th>No</th>
 		<th>NIM</th>
@@ -29,13 +33,12 @@
 		<td><?= $value['jk_mhs'] ?></td>
 		<td><?= $value['agama_mhs'] ?></td>
 		<td>
-			<a class="btn btn-warning" href="<?= site_url('mahasiswa/ubah') ?>">UBAH</a>
-			<a class="btn btn-danger" href="<?= site_url('mahasiswa/hapus') ?>">HAPUS</a>
+			<a class="btn btn-warning btn-sm" href="<?= site_url('mahasiswa/ubah/' . $value['id_mhs']) ?>">UBAH</a>
+			<a onclick="return confirm('Ko yakinkah mau hapus ?')" class="btn btn-danger btn-xs" href="<?= site_url('mahasiswa/hapus/' . $value['id_mhs']) ?>">HAPUS</a>
 		</td>
 	</tr>
 	<?php
 		$no = $no + 1;
 	}
-
 	?>
 </table>
